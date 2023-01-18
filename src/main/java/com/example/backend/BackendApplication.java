@@ -1,5 +1,6 @@
 package com.example.backend;
 
+import com.example.backend.service.Recv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -13,6 +14,13 @@ public class BackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
+        Recv recv = new Recv();
+        try {
+            recv.consumeMessages();
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Bean

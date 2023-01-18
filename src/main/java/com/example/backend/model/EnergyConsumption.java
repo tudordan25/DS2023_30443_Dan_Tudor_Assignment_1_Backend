@@ -11,7 +11,7 @@ public class EnergyConsumption {
     private Long id;
 
     @Column(nullable = false)
-    private Timestamp timestamp;
+    private String timestamp;
 
     @Column(nullable = false)
     private int value;
@@ -23,7 +23,15 @@ public class EnergyConsumption {
 
     }
 
-    public EnergyConsumption(Timestamp timestamp, int value) {
+    public Device getDevice() {
+        return device;
+    }
+
+    public void setDevice(Device device) {
+        this.device = device;
+    }
+
+    public EnergyConsumption(String timestamp, int value) {
         this.timestamp = timestamp;
         this.value = value;
     }
@@ -36,11 +44,11 @@ public class EnergyConsumption {
         this.id = id;
     }
 
-    public Timestamp getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

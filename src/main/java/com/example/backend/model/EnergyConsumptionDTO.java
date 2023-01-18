@@ -3,20 +3,20 @@ package com.example.backend.model;
 import java.sql.Timestamp;
 
 public class EnergyConsumptionDTO {
-    private Timestamp timestamp;
+    private String timestamp;
 
     private int value;
 
-    public EnergyConsumptionDTO(Timestamp timestamp, int value) {
+    public EnergyConsumptionDTO(String timestamp, int value) {
         this.timestamp = timestamp;
         this.value = value;
     }
 
-    public Timestamp getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

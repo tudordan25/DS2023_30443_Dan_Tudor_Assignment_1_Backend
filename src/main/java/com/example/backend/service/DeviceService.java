@@ -35,6 +35,14 @@ public class DeviceService {
         return meteringDevices.stream().map(dtoConverter::fromDevicetoDTO).toList();
     }
 
+    public Device getDeviceWithId(long id){
+
+        Optional<Device> device = deviceRepository.findById(id);
+
+        return device.orElse(null);
+
+    }
+
     public String createDevice(DeviceDTO deviceDTO) {
 
         try {

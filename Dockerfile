@@ -12,7 +12,9 @@ RUN ls -l /root
 FROM openjdk:17.0.2-jdk
 
 ENV TZ=UTC
+ENV SPRING_RABBITMQ_HOST=rabbitmq
 ENV DB_IP=db_server
+ENV RABBIT_IP=demo-rabbit
 ENV DB_PORT=3306
 ENV DB_USER=root
 ENV DB_PASSWORD=root
